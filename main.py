@@ -14,6 +14,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
 app = Flask(__name__)
+#Here you need to create an enviromental variable in your project, or you can simply pass your flask key
 app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
 ckeditor = CKEditor(app)
 Bootstrap5(app)
